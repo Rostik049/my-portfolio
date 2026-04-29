@@ -42,5 +42,3 @@ flowchart LR
 ### Посилання на розгорнутий сайт
 
 [https://victorious-pond-0f1778d03.7.azurestaticapps.net/]
-
-> Замініть посилання на реальну адресу вашого розгорнутого додатка в Azure Static Web Apps.
