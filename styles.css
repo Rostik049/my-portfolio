@@ -8,6 +8,90 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #f0f4f8;
   color: #2d3748;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ─── ТЕМНА ТЕМА ─── */
+body.dark {
+  background: #1a202c;
+  color: #e2e8f0;
+}
+
+body.dark .card {
+  background: #2d3748;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .card h2 {
+  color: #63b3ed;
+}
+
+body.dark .skill {
+  background: #2c5282;
+  color: #90cdf4;
+}
+
+body.dark .info-row {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+}
+
+body.dark .info-row .label {
+  color: #a0aec0;
+}
+
+body.dark .info-row .value {
+  color: #e2e8f0;
+}
+
+body.dark .api-hint {
+  color: #cbd5e0;
+}
+
+body.dark .api-tag {
+  background: #2c5282;
+  color: #90cdf4;
+}
+
+body.dark .progress-bar-container {
+  background: #4a5568;
+}
+
+body.dark .labs li.done {
+  background: #22543d;
+  color: #9ae6b4;
+}
+
+body.dark .labs li.in_work {
+  background: #2d3748;
+  color: #cbd5e0;
+}
+
+/* ─── КНОПКА ПЕРЕМИКАННЯ ТЕМИ ─── */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.5em;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 header {
@@ -15,6 +99,11 @@ header {
   color: white;
   text-align: center;
   padding: 40px 20px;
+  position: relative;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #1a365d, #2c5282);
 }
 
 .avatar {

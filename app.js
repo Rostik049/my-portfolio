@@ -1,5 +1,26 @@
 // app.js — отримує дані про студента та його навички з Azure Functions API
 
+// ─── ПЕРЕМИКАННЯ ТЕМИ ───
+function toggleTheme() {
+  const isDark = document.body.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  updateThemeButton();
+}
+
+function updateThemeButton() {
+  const button = document.querySelector(".theme-toggle");
+  if (button) {
+    button.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  }
+}
+
+// Завантажуємо тему при відкритті сторінки
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+updateThemeButton();
+
+// ─── ЗАВАНТАЖЕННЯ ДАНИХ ───
 async function loadApiData() {
   const box = document.getElementById("api-result");
   box.textContent = "Завантаження...";
