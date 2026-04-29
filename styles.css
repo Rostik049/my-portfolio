@@ -182,6 +182,73 @@ button:hover {
   background: #106ebe;
 }
 
+/* ─── Стилі для навичок з progress bar ─── */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95em;
+}
+
+.skill-level {
+  font-size: 0.85em;
+  color: #718096;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 22px;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0078d4, #50d1ff);
+  border-radius: 12px;
+  transition: width 0.6s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 120, 212, 0.25);
+}
+
+/* Градієнти на основі рівня */
+.progress-bar-fill.level-low {
+  background: linear-gradient(90deg, #f56565, #fc8181);
+}
+
+.progress-bar-fill.level-medium {
+  background: linear-gradient(90deg, #ecc94b, #f6e05e);
+}
+
+.progress-bar-fill.level-high {
+  background: linear-gradient(90deg, #48bb78, #68d391);
+}
+
 footer {
   text-align: center;
   padding: 24px;
